@@ -19,7 +19,7 @@ class TasksController < ApplicationController
       flash[:success] = 'タスクが正常に投稿されました'
       redirect_to @task
     else
-      flash[:danger] = 'タスクが投稿されませんでした'
+      flash.now[:danger] = 'タスクが投稿されませんでした'
       render :new
     end
   end
